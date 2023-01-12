@@ -9,12 +9,19 @@ $var = 0;
 // TODO votre code ici.
 
 
+if ($var === false) {
+    echo "Vide";
+}
+elseif ($var === true) {
+    echo "Pas vide";
+}
 
 
 /**
  * 2. Détruisez la variable déclarée, tentez de l'afficher ensuite en utilisant un print_r.
  */
 $eraseMe = "Please erase me !";
+print_r($eraseMe);
 // TODO votre code ici.
 
 
@@ -22,8 +29,9 @@ $eraseMe = "Please erase me !";
  * 3. Déclarez vous même un tableau et utilisez var_dump pour afficher toutes les informations de debug.
  */
 // TODO votre code ici.
-
+$array=['un','mot'];
 echo "<br>";
+var_dump($array);
 
 /**
  * 4. Faites la même chose avec le même tableau, mais pour la méthode print_r.
@@ -31,6 +39,7 @@ echo "<br>";
 // TODO votre code ici.
 
 echo "<br>";
+print_r($array);
 
 
 /**
@@ -39,7 +48,16 @@ echo "<br>";
  */
 $tab = ["test" => true, "name" => "Doe", "age" => 32];
 // TODO Votre code ici.
-
+foreach ($tab as $keys){
+    if (var_dump(isset($keys)) === false) {
+        echo "false";
+    }
+}
+foreach ($tab as $keys){
+    if (var_dump(isset($keys)) === true) {
+        echo "true";
+    }
+}
 
 /**
  * 6. Créez une variable contenant:
